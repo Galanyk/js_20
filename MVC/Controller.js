@@ -10,13 +10,20 @@ class Controller {
         this.$container = $container;
         // this.Model = new Model(TodoListController.API + TodoListController.ENVIRONMENT.USERS.getUsers);
 
-        this.view = new View($container)
-            //  this.todoListModel.getListItems().then(() => this.initViewRender());
-            // this.view.createContainerInput(this.$container);
+        this.view = new View($container, {
+            onEnter: (userData) => this.enterLogin(userData),
+        })
+        this.model = new Model();
+
     };
 
     initViewRender() {
         this.view.renderInput();
         this.view.appendTo(this.$container);
     };
+
+    enterLogin(userData) {
+        console.log('controler enter');
+        return this.model.loginEnter(userData);
+    }
 }
