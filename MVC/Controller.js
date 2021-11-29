@@ -25,5 +25,5 @@ class Controller {
     enterLogin(userData) {
         console.log('controler enter');
         return this.model.loginEnter(userData);
-    }
+    };
 }
