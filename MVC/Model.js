@@ -5,9 +5,9 @@ class Model {
         password: '12345'
     };
 
-    constructor() {
+    // constructor() {
 
-    };
+    // };
 
     loginEnter(userData) {
         return this.mockData.login === userData.uLogin &&
